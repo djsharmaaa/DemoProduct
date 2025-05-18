@@ -1,5 +1,8 @@
+import Footer from '@/components/Footer/Footer';
 import Banner from '../components/Banner/Banner';
 import ProductCard from '../components/ProductCard/ProductCard';
+import { SpinnerText } from '@/components/SpinnerText/SpinnerText';
+import ProductGrid from '@/components/ProductGrid/ProductGrid';
 
 const sampleProducts = [
   {
@@ -8,29 +11,23 @@ const sampleProducts = [
     image: '/images/headphones.jpg',
     price: 89.99,
   },
-  {
-    id: '2',
-    name: 'Smart Watch',
-    image: '/images/watch.jpg',
-    price: 149.99,
-  },
-  {
-    id: '3',
-    name: 'Gaming Mouse',
-    image: '/images/mouse.jpg',
-    price: 59.99,
-  },
+ 
 ];
 
 export default function HomePage() {
   return (
     <main>
       <Banner />
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+<div className="absolute bottom-0 left-[90%] transform -translate-x-1/2 translate-y-1/2 z-20">
+    <SpinnerText />
+  </div>
+      <section className="  ">
         {sampleProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </section>
+<ProductGrid/>
+      <Footer/>
     </main>
   );
 }

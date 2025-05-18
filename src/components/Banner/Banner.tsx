@@ -22,15 +22,15 @@ export default function Banner() {
       setTimeout(() => {
         setAnimating(false);
         setPrevIndex(null);
-      }, 2000); // slide duration
-    }, 8000); // total time (slide + zoom pause)
-    
+      }, 2000);
+    }, 8000);
+
     return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
-    <section className="relative h-screen w-full bg-black text-white flex items-center justify-center px-6 overflow-hidden">
-      {/* Images Container */}
+    <section className="relative h-screen w-full bg-black text-white flex items-center justify-start px-6 overflow-hidden">
+      {/* Background Images */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Previous Image Sliding Out */}
         {prevIndex !== null && (
@@ -49,7 +49,7 @@ export default function Banner() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${images[currentIndex]})`,
-            animation: animating ? 'slideDownIn 2s forwards ease-in-out' : undefined,
+            animation: animating ? 'slideDownIn 0.8s forwards ease-in-out' : undefined,
             zIndex: 10,
           }}
         >
@@ -63,12 +63,11 @@ export default function Banner() {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-20 text-center max-w-4xl">
-        <h1 className="text-4xl md:text-6xl font-bold font-serif leading-tight">
-          INSPIRE THE WORLD,
-          <br />
-          CREATE THE FUTURE
+      {/* Main Content */}
+      <div className="relative z-20 text-left w-[75vw] max-w-[1000px] lg:ml-28 md:ml-20 px-4">
+        <h1 className="text-4xl md:text-6xl font-bold font-serif leading-snug tracking-tight">
+          The Strenght of any masterpiece lies in the bonds you don't see.
+       
         </h1>
 
         <div className="mt-10">
@@ -81,14 +80,16 @@ export default function Banner() {
             GET STARTED
           </button>
         </div>
-
-        <div className="mt-10 flex justify-center gap-6 text-sm">
-          <span className="hover:underline cursor-pointer">FACEBOOK</span>
-          <span className="hover:underline cursor-pointer">TWITTER</span>
-          <span className="hover:underline cursor-pointer">LINKEDIN</span>
-        </div>
       </div>
 
+      {/* Social Links Bottom Left */}
+      <div className="absolute bottom-6 left-6 z-20 flex gap-6 text-sm">
+        <span className="hover:underline cursor-pointer">FACEBOOK</span>
+        <span className="hover:underline cursor-pointer">TWITTER</span>
+        <span className="hover:underline cursor-pointer">LINKEDIN</span>
+      </div>
+
+      {/* Animations */}
       <style jsx>{`
         @keyframes slideDownIn {
           0% {
@@ -121,7 +122,10 @@ export default function Banner() {
           animation: zoomInEffect 6s ease-in-out forwards;
           will-change: transform;
           position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
