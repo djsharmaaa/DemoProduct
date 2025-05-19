@@ -112,11 +112,24 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* ✅ Colonial font-face definition */
+@font-face {
+  font-family: 'Colonial';
+  src: url('/fonts/colonial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
-  * {
+ * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
+  @layer utilities {
+  .font-colonial {
+    font-family: 'Colonial', var(--font-sans);
+  }
+}
 }

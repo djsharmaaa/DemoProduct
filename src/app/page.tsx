@@ -15,6 +15,7 @@ export default function HomePage() {
 </div>
 
      <ProductCard/>
+    
 <ProductGrid/>
       <Footer/>
     </main>

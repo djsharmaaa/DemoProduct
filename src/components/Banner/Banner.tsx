@@ -86,6 +86,9 @@ export default function Banner() {
   <span className="hover:underline cursor-pointer">FACEBOOK</span>
   <span className="hover:underline cursor-pointer">TWITTER</span>
   <span className="hover:underline cursor-pointer">LINKEDIN</span>
+
+
+
 </div>
 
       {/* Animations */}

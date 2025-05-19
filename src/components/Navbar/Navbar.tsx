@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,13 +33,18 @@ export default function Navbar() {
           scrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
       >
-        <div
-          className={`font-bold text-2xl transition-colors duration-300 ${
-            scrolled ? 'text-black' : 'text-white'
-          }`}
-        >
-          Epitailo
-        </div>
+ <div className="transition-all duration-300">
+  <Image
+    src="/images/EpitailoLogo.png"
+    alt="Epitailo Logo"
+    width={120}
+    height={40}
+    className={`h-auto w-auto transition-all duration-300 ${
+      scrolled ? '' : 'invert'
+    }`}
+    priority // Ensures it loads quickly for better LCP
+  />
+</div>
 
         {/* Desktop Button */}
         {!menuOpen && (
