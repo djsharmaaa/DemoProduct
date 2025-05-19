@@ -4,15 +4,7 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import { SpinnerText } from '@/components/SpinnerText/SpinnerText';
 import ProductGrid from '@/components/ProductGrid/ProductGrid';
 
-const sampleProducts = [
-  {
-    id: '1',
-    name: 'Wireless Headphones',
-    image: '/images/headphones.jpg',
-    price: 89.99,
-  },
- 
-];
+
 
 export default function HomePage() {
   return (
@@ -21,11 +13,7 @@ export default function HomePage() {
 <div className="absolute bottom-0 left-[90%] transform -translate-x-1/2 translate-y-1/2 z-20">
     <SpinnerText />
   </div>
-      <section className="  ">
-        {sampleProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </section>
+     <ProductCard/>
 <ProductGrid/>
       <Footer/>
     </main>
