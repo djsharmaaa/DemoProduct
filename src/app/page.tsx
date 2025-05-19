@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer/Footer';
 import Banner from '../components/Banner/Banner';
-import ProductCard from '../components/ProductCard/ProductCard';
+// import ProductCard from '../components/ProductCard/ProductCard';
 import { SpinnerText } from '@/components/SpinnerText/SpinnerText';
 import ProductGrid from '@/components/ProductGrid/ProductGrid';
 
@@ -14,7 +14,7 @@ export default function HomePage() {
   <SpinnerText />
 </div>
 
-     <ProductCard/>
+     {/* <ProductCard/> */}
     
 <ProductGrid/>
       <Footer/>

@@ -10,8 +10,8 @@ export function SpinnerText() {
       <div className="absolute inset-0 rounded-full bg-orange-500 group-hover:bg-orange-600 transition-all duration-200 flex items-center justify-center overflow-hidden">
         {/* Spinning Text Inside the Circle */}
         <SpinningText
-          radius={9}
-          fontSize={1.2}
+          radius={11}
+          fontSize={1}
           className="text-white group-hover:animate-spin-slow"
         >
           {`Fix it! Forget it! • `.repeat(2)}
