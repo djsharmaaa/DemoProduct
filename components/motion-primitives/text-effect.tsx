@@ -177,7 +177,8 @@ const createVariantsWithTransition = (
 ): Variants => {
   if (!transition) return baseVariants;
 
-  const { exit: _, ...mainTransition } = transition;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { exit: __unused, ...mainTransition } = transition;
 
   return {
     ...baseVariants,

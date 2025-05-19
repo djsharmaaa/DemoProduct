@@ -70,7 +70,7 @@ export default function Banner() {
        
         </h1>
 
-        <div className="mt-10">
+        <div className="mt-10"> 
           <input
             type="email"
             placeholder="ENTER YOUR EMAIL"
