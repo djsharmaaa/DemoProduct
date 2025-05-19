@@ -10,9 +10,10 @@ export default function HomePage() {
   return (
     <main>
       <Banner />
-<div className="absolute bottom-0 left-[90%] transform -translate-x-1/2 translate-y-1/2 z-20">
-    <SpinnerText />
-  </div>
+<div className="absolute bottom-0 left-[75%] sm:left-3/4 md:left-[90%] transform -translate-x-1/2 translate-y-1/2 z-20">
+  <SpinnerText />
+</div>
+
      <ProductCard/>
 <ProductGrid/>
       <Footer/>

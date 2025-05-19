@@ -64,13 +64,12 @@ export default function Banner() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 text-left w-[75vw] max-w-[1000px] lg:ml-28 md:ml-20 px-4">
+      <div className="relative z-20 text-left w-11/12 sm:w-10/12 md:w-3/4 max-w-[1000px] lg:ml-28 md:ml-20 px-4">
         <h1 className="text-4xl md:text-6xl font-bold font-serif leading-snug tracking-tight">
           The Strenght of any masterpiece lies in the bonds you dont see.
-       
         </h1>
 
-        <div className="mt-10"> 
+        <div className="mt-10">
           <input
             type="email"
             placeholder="ENTER YOUR EMAIL"
@@ -83,11 +82,11 @@ export default function Banner() {
       </div>
 
       {/* Social Links Bottom Left */}
-      <div className="absolute bottom-6 left-6 z-20 flex gap-6 text-sm">
-        <span className="hover:underline cursor-pointer">FACEBOOK</span>
-        <span className="hover:underline cursor-pointer">TWITTER</span>
-        <span className="hover:underline cursor-pointer">LINKEDIN</span>
-      </div>
+      <div className="absolute bottom-6 left-6 z-20 flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm">
+  <span className="hover:underline cursor-pointer">FACEBOOK</span>
+  <span className="hover:underline cursor-pointer">TWITTER</span>
+  <span className="hover:underline cursor-pointer">LINKEDIN</span>
+</div>
 
       {/* Animations */}
       <style jsx>{`

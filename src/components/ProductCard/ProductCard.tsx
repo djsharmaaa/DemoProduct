@@ -25,12 +25,11 @@ export default function ProductPage() {
         </div>
 
         {/* Center - Large Spline Model */}
-     <div className="w-full lg:w-1/2 h-[700px] flex justify-center items-center overflow-visible">
-  <div className="scale-[1.5] origin-center w-full h-full">
-    <Spline scene="https://prod.spline.design/Nxsekh9ZF2smq73F/scene.splinecode" />
-  </div>
-</div>
-
+        <div className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[700px] flex justify-center items-center overflow-visible">
+          <div className="w-full h-full scale-[1] sm:scale-[1.2] lg:scale-[1.5] origin-center">
+            <Spline scene="https://prod.spline.design/Nxsekh9ZF2smq73F/scene.splinecode" />
+          </div>
+        </div>
 
         {/* Right - Product Info / Buy Section */}
         <div className="w-full lg:w-1/4 text-center lg:text-left">
