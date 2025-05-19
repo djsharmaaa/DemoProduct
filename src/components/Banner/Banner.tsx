@@ -66,7 +66,7 @@ export default function Banner() {
       {/* Main Content */}
       <div className="relative z-20 text-left w-[75vw] max-w-[1000px] lg:ml-28 md:ml-20 px-4">
         <h1 className="text-4xl md:text-6xl font-bold font-serif leading-snug tracking-tight">
-          The Strenght of any masterpiece lies in the bonds you don't see.
+          The Strenght of any masterpiece lies in the bonds you dont see.
        
         </h1>
 
